@@ -1,0 +1,374 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: white;
+  background-image: url("/images/bc.png");
+  background-size: cover;
+  background-size: 110%;
+  color: #343a40;
+}
+
+header .header-content {
+  display: flex;
+  margin: 0px 50px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header .header-content .text {
+  width: 80%;
+  padding-right: 30px;
+}
+header .header-content .text h1 {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  font-size: 2.6rem;
+}
+header .header-content .text h1 .bb {
+  border-bottom: 5px solid rgb(255, 0, 247);
+}
+header .header-content .photo {
+  background-image: url("/images/IMG_0101.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 500px;
+  height: 600px;
+  position: relative;
+  border-radius: 5px;
+}
+header .header-content .photo-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 0, 247, 0.15);
+  width: 100%;
+  height: 100%;
+}
+header .header-content .profiles {
+  position: absolute;
+  z-index: 5;
+  right: 30px;
+  top: 10px;
+  font-size: 1.5rem;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+header .header-content .profiles a {
+  color: #343a40;
+  transition: color 0.4s;
+  padding: 10px;
+}
+header .header-content .profiles a:hover {
+  color: rgb(255, 0, 247);
+}
+
+h2 {
+  margin: 30px 0px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.links {
+  display: flex;
+  justify-content: start;
+}
+
+.link {
+  position: relative;
+  padding: 10px 20px;
+  text-decoration: none;
+  z-index: 0;
+  cursor: pointer;
+  color: #343a40;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.link,
+.link::after {
+  transition: 0.3s;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0px;
+  width: 100%;
+  background-color: rgb(255, 0, 247);
+  z-index: -5;
+}
+
+.link:hover::after {
+  height: 100%;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  border-bottom: 3px solid rgb(255, 0, 247);
+  width: 70%;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.skills {
+  border-top: 2px solid lightGray;
+  margin: 50px 100px;
+}
+.skills h2 {
+  margin-top: 30px;
+  text-align: center;
+}
+.skills .icons .item {
+  margin: 30px 0;
+}
+.skills .icons .item .heading {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0;
+}
+.skills .icons .item p {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.skills .icons .item i {
+  font-size: 3rem;
+  padding: 10px;
+}
+
+.projects {
+  border-top: 2px solid lightGray;
+  margin: 50px 100px;
+}
+.projects .project-card {
+  height: 500px;
+  margin-bottom: 20px;
+}
+.projects .name {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 10px 0px;
+}
+.projects .technologies {
+  display: flex;
+  text-transform: uppercase;
+}
+.projects .technologies p {
+  margin-right: 5px;
+  font-size: 0.9rem;
+}
+.projects .p1 .photo {
+  background-image: url("/images/feedrawimg.png");
+  background-size: cover;
+  background-position: center;
+  height: 70%;
+}
+.projects .p2 .photo {
+  background-image: url("/images/calc.png");
+  background-size: cover;
+  background-position: center;
+  height: 70%;
+}
+.projects .p3 .photo {
+  background-image: url("/images/advice.png");
+  background-size: cover;
+  background-position: center;
+  height: 70%;
+}
+.projects .p4 .photo {
+  background-image: url("/images/todo.png");
+  background-size: cover;
+  background-position: center;
+  height: 70%;
+}
+
+.contact-me {
+  background-color: lightGray;
+  width: 100%;
+}
+.contact-me .box {
+  margin: 50px 100px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 400px;
+  border-top: 2px solid lightGray;
+}
+.contact-me .box .contact-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 50px;
+}
+.contact-me .box .contact-text h2 {
+  text-align: start;
+}
+.contact-me .box .contact-text p {
+  width: 70%;
+}
+.contact-me .box .contact-form {
+  width: 90%;
+}
+.contact-me .box .contact-form form {
+  padding: 20px;
+  margin: auto;
+}
+.contact-me .box .contact-form form input,
+.contact-me .box .contact-form form textarea {
+  width: 100%;
+  border: none;
+  background-color: lightGray;
+  border-bottom: 1px solid white;
+  padding: 15px;
+}
+.contact-me .box .contact-form form ::-moz-placeholder {
+  text-transform: uppercase;
+  color: white;
+}
+.contact-me .box .contact-form form ::placeholder {
+  text-transform: uppercase;
+  color: white;
+}
+.contact-me .box .contact-form form .buttons {
+  display: flex;
+  justify-content: center;
+}
+.contact-me .box .contact-form form .btnForm {
+  margin-right: 10px;
+  padding: 10px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  background-color: #343a40;
+  text-transform: uppercase;
+  color: white;
+  transition: all 0.4s;
+}
+.contact-me .box .contact-form form .btnForm:hover {
+  background-color: white;
+  color: #343a40;
+}
+.contact-me .box .contact-form form .form-box .errortext {
+  color: tomato;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+}
+.contact-me .box .contact-form form .form-box.error input,
+.contact-me .box .contact-form form .form-box.error textarea {
+  border-bottom: 1px solid tomato;
+}
+.contact-me .box .contact-form form .form-box.error ::-moz-placeholder {
+  color: tomato;
+}
+.contact-me .box .contact-form form .form-box.error ::placeholder {
+  color: tomato;
+}
+
+@media screen and (min-width: 1024px) {
+  header .header-content .text {
+    width: 600px;
+  }
+  .contact-me .box {
+    justify-content: center;
+  }
+  .contact-me .box .contact-form {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  body {
+    background-size: 300%;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    background-size: 400%;
+  }
+  header .header-content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  header .header-content .text {
+    width: 90%;
+  }
+  header .header-content .text h1 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  header .header-content .text p {
+    font-size: 1rem;
+  }
+  header .header-content .text .links {
+    justify-content: center;
+  }
+  header .header-content .photo {
+    height: 400px;
+    width: 375px;
+  }
+  .projects {
+    margin: 50px 50px;
+  }
+  .projects .name {
+    font-size: 1rem;
+  }
+  .projects .technologies p {
+    font-size: 0.7rem;
+  }
+  .contact-me {
+    height: 600px;
+  }
+  .contact-me .box {
+    margin: 50px 0px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-me .box .contact-text {
+    padding: 0;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  .contact-me .box .contact-text p {
+    width: 60%;
+  }
+  .contact-me .box .contact-form form {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 375px) {
+  body {
+    background-size: 400%;
+  }
+  .link {
+    font-size: 0.7rem;
+  }
+  header .header-content {
+    text-align: center;
+  }
+  header .header-content .text {
+    width: 100%;
+  }
+  header .header-content .photo {
+    width: 100%;
+  }
+  header .header-content .profiles {
+    right: 35px;
+    font-size: 1.2rem;
+  }
+  .contact-me .box .contact-text p {
+    width: 90%;
+  }
+}/*# sourceMappingURL=style.css.map */
