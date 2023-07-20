@@ -23,11 +23,12 @@
         <div class="header-content">
             <div class="text">
                 <h1>Hi! <br>I'm <span class="bb">Julia Bartczak</span></h1>
-                <p>Inividual driven by a passion for creativity and the art of creation. In 2022, I embarked on a programming journey by undertaking the CS50 Introduction to Computer
+                <p>Inividual driven by a passion for creativity and the art of creation. In 2022, I embarked on a
+                    programming journey by undertaking the CS50 Introduction to Computer
                     Science course. Completing this course in December sparked my decision to specialize in frontend
                     development. </p>
-                <div class="links"><a class="link">Contact me</a>
-                    <a href="#" class="link">Browse Portfolio</a>
+                <div class="links"><a href="#contact-me" class="link">Contact me</a>
+                    <a href="#projects" class="link">Browse Portfolio</a>
                 </div>
             </div>
             <div class="photo">
@@ -36,8 +37,10 @@
                     <a href="https://github.com/naluja"><i class="fa-brands fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/julia-bartczak-67856b184/"><i
                             class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://www.goodreads.com/user/show/113627126-julia"><i class="fa-brands fa-goodreads"></i></a>
-                        <a href="https://www.discordapp.com/users/1121463958289784922"><i class="fa-brands fa-discord"></i></a>
+                    <a href="https://www.goodreads.com/user/show/113627126-julia"><i
+                            class="fa-brands fa-goodreads"></i></a>
+                    <a href="https://www.discordapp.com/users/1121463958289784922"><i
+                            class="fa-brands fa-discord"></i></a>
                 </div>
             </div>
 
@@ -80,7 +83,7 @@
             </div>
 
         </section>
-        <section class="projects">
+        <section class="projects" id="projects">
             <h2>Projects</h2>
             <div class="row">
                 <div class="col-md-6 col-xl-4">
@@ -159,31 +162,33 @@
 
         </section>
 
-      
+
     </main>
     <footer>
-        <section class="contact-me">
+        <section class="contact-me" id="contact-me">
             <div class="box">
                 <div class="contact-text">
                     <h2>Contact Me</h2>
-                    <p>If you're interested in collaboration please fill in the form, and I'll get back to you as soon as possible or just give me a <a class="link" href="tel:+883579558">Call</a></p>
+                    <p>If you're interested in collaboration please fill in the form, and I'll get back to you as soon
+                        as possible or just give me a <a class="link" href="tel:+883579558">Call</a></p>
                 </div>
                 <div class="contact-form">
-                    <form>
+                    <form onsubmit="sendEmail(); reset(); return false">
                         <div class="form-box">
-                            <input type="text" id="name" placeholder="name">
+                            <input type="text" id="name" placeholder="name" name="name" id="name">
                             <p class="errortext"></p>
                         </div>
                         <div class="form-box">
-                            <input type="email" id="email" placeholder="email">
+                            <input type="email" id="email" placeholder="email" name="email" id="email">
                             <p class="errortext"></p>
                         </div>
                         <div class="form-box">
-                            <textarea type="text" id="message" placeholder="message"></textarea>
+                            <textarea type="text" id="message" placeholder="message" name="message"
+                                id="message"></textarea>
                             <p class="errortext"></p>
                         </div>
                         <div class="buttons">
-                            <button class="btnForm send">Send</button>
+                            <button class="btnForm send" type="submit">Send</button>
                             <button class="btnForm clear">Clear</button>
                         </div>
                     </form>
@@ -197,6 +202,21 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="aos.js"></script>
     <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "paterska.j@gmail.com",
+                To: "paterska.j@gmail.com",
+                From: document.querySelector("#email").value,
+                Subject: "This is the subject",
+                Body: "something"
+            }).then(
+                message => alert("OK")
+            );
+        }
+    </script>
 </body>
 
 </html>
