@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a6428406eb.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Portfolio</title>
 </head>
 
@@ -173,7 +173,7 @@
                         as possible or just give me a <a class="link" href="tel:+883579558">Call</a></p>
                 </div>
                 <div class="contact-form">
-                    <form onsubmit="sendEmail(); reset(); return false">
+                    <form action="https://formsubmit.co/your@email.com" method="POST"
                         <div class="form-box">
                             <input type="text" id="name" placeholder="name" name="name" id="name">
                             <p class="errortext"></p>
@@ -202,21 +202,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="aos.js"></script>
     <script src="script.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail() {
-            Email.send({
-                Host: "smtp.gmail.com",
-                Username: "paterska.j@gmail.com",
-                To: "paterska.j@gmail.com",
-                From: document.querySelector("#email").value,
-                Subject: "This is the subject",
-                Body: "something"
-            }).then(
-                message => alert("OK")
-            );
-        }
-    </script>
+   
 </body>
 
 </html>
