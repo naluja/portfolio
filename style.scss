@@ -30,6 +30,9 @@ header {
 					border-bottom: 5px solid $mainColor;
 				}
 			}
+			p{
+				margin-bottom: 50px;
+			}
 		}
 		.photo {
 			background-image: url("/images/IMG_0101.jpg");
@@ -79,11 +82,12 @@ h2 {
 }
 .links {
 	display: flex;
-	justify-content: start;
+	justify-content:center;
 }
 
 .link {
 	position: relative;
+	right: 20px;
 	padding: 10px 20px;
 	text-decoration: none;
 	z-index: 0;
@@ -365,14 +369,18 @@ h2 {
 	body {
 		background-size: 400%;
 	}
+	.links{
+		margin-left: 20px;
+	}
 	.link {
-		font-size: 0.7rem;
+		font-size: 0.8rem;
 	}
 	header {
 		.header-content {
 			text-align: center;
 			.text {
 				width: 100%;
+				padding: 0px;
 			}
 			.photo {
 				width: 100%;
