@@ -227,6 +227,19 @@ h2 {
 			p {
 				width: 70%;
 			}
+			.call{
+				text-decoration: none;
+				text-transform: uppercase;
+				font-weight: bold;
+				margin-left: 5px;
+				color:$mainColor;
+				transition: color .3s;
+			}
+			.call:hover{
+				color:white;
+
+			}
+			
 		}
 		.contact-form {
 			width: 90%;
@@ -320,9 +333,7 @@ h2 {
 				p {
 					font-size: 1rem;
 				}
-				.links {
-					justify-content: center;
-				}
+			
 			}
 			.photo {
 				height: 400px;

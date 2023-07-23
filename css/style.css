@@ -223,6 +223,17 @@ h2 {
 .contact-me .box .contact-text p {
   width: 70%;
 }
+.contact-me .box .contact-text .call {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 5px;
+  color: rgb(255, 0, 247);
+  transition: color 0.3s;
+}
+.contact-me .box .contact-text .call:hover {
+  color: white;
+}
 .contact-me .box .contact-form {
   width: 90%;
 }
@@ -316,9 +327,6 @@ h2 {
   }
   header .header-content .text p {
     font-size: 1rem;
-  }
-  header .header-content .text .links {
-    justify-content: center;
   }
   header .header-content .photo {
     height: 400px;
