@@ -172,6 +172,13 @@ h2 {
   margin-right: 5px;
   font-size: 0.9rem;
 }
+.projects .p0 .photo {
+  background-image: url("/images/ipadresstracker.png");
+  background-size: cover;
+  background-position: center;
+  height: 70%;
+  background-position: top;
+}
 .projects .p1 .photo {
   background-image: url("/images/feedrawimg.png");
   background-size: cover;

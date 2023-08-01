@@ -176,6 +176,12 @@ h2 {
 			font-size: 0.9rem;
 		}
 	}
+	.p0{
+		.photo{
+			@include projectphoto("/images/ipadresstracker.png");
+			background-position:top;
+		}
+	}
 
 	.p1 {
 		.photo {
