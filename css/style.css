@@ -13,6 +13,10 @@ body {
   color: #343a40;
 }
 
+header {
+  max-width: 1400px;
+  margin: auto;
+}
 header .header-content {
   display: flex;
   margin: 0px 50px;
@@ -35,7 +39,7 @@ header .header-content .text p {
   margin-bottom: 50px;
 }
 header .header-content .photo {
-  background-image: url("/images/IMG_0101.jpg");
+  background-image: url("/images/imgbig.jpg");
   background-size: cover;
   background-position: center;
   width: 500px;
@@ -48,7 +52,7 @@ header .header-content .photo-shadow {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(255, 0, 247, 0.2);
+  background-color: rgba(255, 0, 247, 0.1);
   width: 100%;
   height: 100%;
 }
@@ -402,6 +406,9 @@ h2 {
   header .header-content .profiles {
     right: 35px;
     font-size: 1.2rem;
+  }
+  header .photo {
+    background-image: url("/images/imgsmall.jpg");
   }
   .contact-me .box .contact-text p {
     width: 90%;

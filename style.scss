@@ -21,11 +21,14 @@ body {
 }
 
 header {
+	max-width: 1400px;
+	margin: auto;
 	.header-content {
 		display: flex;
 		margin: 0px 50px;
 		align-items: center;
 		justify-content: space-evenly;
+
 		.text {
 			width: 80%;
 			padding-right: 30px;
@@ -42,8 +45,7 @@ header {
 			}
 		}
 		.photo {
-			background-image: url("/images/IMG_0101.jpg");
-
+			background-image: url("/images/imgbig.jpg");
 			background-size: cover;
 			background-position: center;
 			width: 500px;
@@ -176,10 +178,10 @@ h2 {
 			font-size: 0.9rem;
 		}
 	}
-	.p0{
-		.photo{
+	.p0 {
+		.photo {
 			@include projectphoto("/images/ipadresstracker.png");
-			background-position:top;
+			background-position: top;
 		}
 	}
 
@@ -407,6 +409,9 @@ h2 {
 				right: 35px;
 				font-size: 1.2rem;
 			}
+		}
+		.photo {
+			background-image: url("/images/imgsmall.jpg");
 		}
 	}
 	.contact-me {
