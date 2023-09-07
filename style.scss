@@ -170,6 +170,9 @@ h2 {
 		font-size: 1.3rem;
 		font-weight: bold;
 		margin: 10px 0px;
+		span{
+			font-size: 0.7rem;
+		}
 	}
 	.technologies {
 		display: flex;
@@ -177,6 +180,12 @@ h2 {
 		p {
 			margin-right: 5px;
 			font-size: 0.9rem;
+		}
+	}
+	.p01{
+		.photo{
+			@include projectphoto("/images/beady.png");
+			background-position:top;
 		}
 	}
 	.p0 {
